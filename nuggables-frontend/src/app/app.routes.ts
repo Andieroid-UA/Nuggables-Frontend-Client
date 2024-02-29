@@ -15,6 +15,8 @@ export const routes: Routes = [
 //--------------CANNABIS LIBRARY--------------------------
 { path: 'library', component: LibraryComponent},
 { path: 'plantsim', component: PlantsimComponent},
+//--------------CANNABIS LOG--------------------------
+//{ path: 'log', component: },
 //--------------LOGIN/SIGNUP/AUTH------------------------
 //{ path: 'login', component: LoginComponent},
 //{ path: 'signup', component: SignupComponent},
