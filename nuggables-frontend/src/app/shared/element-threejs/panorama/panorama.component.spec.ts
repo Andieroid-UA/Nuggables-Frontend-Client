@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PanoramaComponent } from './panorama.component';
 
 describe('PanoramaComponent', () => {
@@ -11,7 +10,7 @@ describe('PanoramaComponent', () => {
       imports: [PanoramaComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PanoramaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +20,5 @@ describe('PanoramaComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
