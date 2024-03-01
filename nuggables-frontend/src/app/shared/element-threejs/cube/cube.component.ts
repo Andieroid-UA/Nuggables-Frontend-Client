@@ -1,6 +1,5 @@
 import { Component, ElementRef, NgZone, AfterViewInit, ViewChild } from '@angular/core';
 import * as THREE from 'three';
-import { MainMenuComponent } from '../../../main-menu/main-menu.component';
 import { RouterModule } from '@angular/router';
 
 @Component({

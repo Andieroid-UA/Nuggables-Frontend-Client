@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import * as THREE from 'three';
-import { PMREMGenerator } from 'three';
 
 @Component({
   selector: 'app-panorama2',
@@ -111,7 +110,7 @@ export class Panorama2Component implements OnInit {
     geometry.scale(-1, 1, 1);
 
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load('assets/img/mountains.jpg', (texture) => {
+    textureLoader.load('assets/img/mountains.png', (texture) => {
       texture.wrapS = THREE.RepeatWrapping; // Update the texture wrapping
       texture.repeat.set(1, 1); // Set texture repeat values
 
