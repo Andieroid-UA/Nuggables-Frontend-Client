@@ -4,7 +4,6 @@ import { CubeMovingComponent } from './shared/element-threejs/cube-moving/cube-m
 import { PanoramaComponent } from './shared/element-threejs/panorama/panorama.component';
 import { Panorama2Component } from './shared/element-threejs/panorama2/panorama2.component';
 import { CannabisComponent } from './shared/element-threejs/cannabis/cannabis.component';
-import { AuthComponent } from './auth/auth.component';
 import { CannabisLogComponent } from './shared/components/cannabis-log/cannabis-log.component';
 import { ContactComponent } from './shared/components/contact/contact.component';
 import { LibraryMenuComponent } from './shared/components/library-menu/library-menu.component';
@@ -12,6 +11,8 @@ import { LibraryComponent } from './shared/components/library/library.component'
 import { MainMenuComponent } from './shared/components/main-menu/main-menu.component';
 import { PlantsimComponent } from './shared/components/plantsim/plantsim.component';
 import { ResourcesComponent } from './shared/components/resources/resources.component';
+import { noAuthGuard } from './core/guards/no-auth.guard';
+import { authGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
 //----------------TEST PAGES-------------------
@@ -21,7 +22,7 @@ export const routes: Routes = [
 { path: 'panorama2', component: Panorama2Component },
 { path: 'cannabis', component: CannabisComponent },
 //----------------MAIN PAGE-------------------
-{ path: '', redirectTo: '/main', pathMatch: 'full' },
+// { path: '', redirectTo: '/main', pathMatch: 'full' },
 { path: 'main', component: MainMenuComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'resources', component: ResourcesComponent},
@@ -32,7 +33,24 @@ export const routes: Routes = [
 //--------------CANNABIS LOG--------------------------
 { path: 'log', component: CannabisLogComponent},
 //--------------LOGIN/SIGNUP/AUTH------------------------
-//{ path: 'login', component: LoginComponent},
-//{ path: 'signup', component: SignupComponent},
-{ path: 'auth', component: AuthComponent}
+
+  {
+    path: "",
+    pathMatch: "full",
+    loadComponent: () => import('./shared/components/main-menu/main-menu.component').then((c) => c.MainMenuComponent),
+    canActivate: [authGuard]
+  },
+
+  {
+      path: 'login',
+      loadComponent: () => import('./auth/login/login.component').then((c) => c.LoginComponent),
+      canActivate: [noAuthGuard]
+  },
+
+  {
+    path: 'signup',
+    loadComponent: () => import('./auth/signup/signup.component').then((c) => c.SignupComponent),
+    canActivate: [noAuthGuard]
+  }
+
 ];
