@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { AuthenticationService } from '../../../core/services/authentication.service';
 import { User } from '../../models/user';
 import { UserService } from '../../../core/services/user.service';
-import { AppComponent } from '../../../app.component';
 
 @Component({
   selector: 'app-navigation',

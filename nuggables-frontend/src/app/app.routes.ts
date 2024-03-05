@@ -23,7 +23,7 @@ export const routes: Routes = [
 { path: 'cannabis', component: CannabisComponent },
 //----------------MAIN PAGE-------------------
 // { path: '', redirectTo: '/main', pathMatch: 'full' },
-{ path: 'main', component: MainMenuComponent},
+//{ path: 'main', component: MainMenuComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'resources', component: ResourcesComponent},
 //--------------CANNABIS LIBRARY--------------------------
@@ -34,23 +34,22 @@ export const routes: Routes = [
 { path: 'log', component: CannabisLogComponent},
 //--------------LOGIN/SIGNUP/AUTH------------------------
 
-  {
-    path: "",
-    pathMatch: "full",
-    loadComponent: () => import('./shared/components/main-menu/main-menu.component').then((c) => c.MainMenuComponent),
-    canActivate: [authGuard]
-  },
-
-  {
-      path: 'login',
-      loadComponent: () => import('./auth/login/login.component').then((c) => c.LoginComponent),
-      canActivate: [noAuthGuard]
-  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+	{
+		path: 'login',
+		loadComponent: () => import('./auth/login/login.component').then((m) => m.LoginComponent),
+	},
 
   {
     path: 'signup',
     loadComponent: () => import('./auth/signup/signup.component').then((c) => c.SignupComponent),
     canActivate: [noAuthGuard]
-  }
+  },
+
+  {
+		path: 'main',
+		loadComponent: () => import('./shared/components/main-menu/main-menu.component').then((m) => m.MainMenuComponent),
+		canActivate: [authGuard],
+	},
 
 ];
