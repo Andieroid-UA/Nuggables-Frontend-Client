@@ -1,18 +1,23 @@
+p {
+  font: bold;
+  color: #09b400;
+}
+
 .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: blue;
+  background-color: rgb(34, 57, 7);
   padding: 0.5rem 1rem;
   position: sticky;
   top:0;
   width: 100%;
+  font-family: Limited-Edition;
 }
 
-.navbar .brand-name{
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
+.navbar-brand{
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
   padding-left: 0.5rem;
 }
 
@@ -32,7 +37,7 @@
 
 .navbar .nav-links a:hover,
 .navbar .nav-links a.active {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: orange;
   border-radius: 4px;
 }
@@ -57,7 +62,7 @@
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: rgb(73, 189, 46);
 }
 
 .sidebar {
