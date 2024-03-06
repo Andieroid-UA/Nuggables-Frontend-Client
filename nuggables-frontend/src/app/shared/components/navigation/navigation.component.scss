@@ -12,12 +12,12 @@ p {
   position: sticky;
   top:0;
   width: 100%;
+  font-family: Limited-Edition;
 }
 
 .navbar-brand{
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(255, 0, 0);
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
   padding-left: 0.5rem;
 }
 
@@ -37,7 +37,7 @@ p {
 
 .navbar .nav-links a:hover,
 .navbar .nav-links a.active {
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: orange;
   border-radius: 4px;
 }

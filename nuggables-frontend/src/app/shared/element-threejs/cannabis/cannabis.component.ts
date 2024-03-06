@@ -35,7 +35,7 @@ export class CannabisComponent implements AfterViewInit {
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     // Set camera position (closer to the model)
-    this.camera.position.set(0, .75, 0.5); // Adjust camera position to be closer to the model
+    this.camera.position.set(-.4, .75, 0.5); // Adjust camera position to be closer to the model
 
     // Create renderer
     this.renderer = new THREE.WebGLRenderer();
@@ -43,7 +43,7 @@ export class CannabisComponent implements AfterViewInit {
 
     // Load background texture
     const textureLoader = new TextureLoader();
-    const backgroundImage = textureLoader.load('assets/img/Moon.PNG'); // Replace with your actual image file path
+    const backgroundImage = textureLoader.load('assets/img/Tent.PNG'); // Replace with your actual image file path
 
     // Set background texture
     this.scene.background = backgroundImage;
