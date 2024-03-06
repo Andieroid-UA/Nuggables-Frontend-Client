@@ -1,33 +1,16 @@
-  <!-- HEADER -->
-  <body>
-  <!-------------------------------------------------------------------------->
-  <div class="container">
-    <div class="row">
-      <h3>Nuggables API</h3>
-      <div class="col-md-12">
-        <button class="btn btn-primary" routerLink="/main"   >Home</button>
-        <button class="btn btn-primary" routerLink="/libmenu"   >Library</button>
-        <button class="btn btn-primary" routerLink="/plantsim"  >Grow Cycle Sim</button>
-        <button class="btn btn-primary" routerLink="/log"       >My Log</button>
-        <button class="btn btn-primary" routerLink="/contact"   >Contact</button>
-        <button class="btn btn-primary" routerLink="/resources" >Resources</button>
-      </div>
-    </div>
+<!-- HEADER -->
+<body>
+  <div class="col-md-12">
+      <app-navigation/>
   </div>
   <!-------------------------------------------------------------------------->
   <!-- BODY -->
-    <div class="container">
+    <div class="window">
       <div class="row">
       <div class="col-md-12">
         <router-outlet></router-outlet>
       </div>
       </div>
     </div>
-<!-------------------------------------------------------------------------->
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="/">Back to top</a></p>
-     <p>&copy;Tokeson Aristoneya, Nuggables LLC &middot; <a href="/">Privacy</a> &middot; <a href="/">Terms</a></p>
-    </footer>
 <!-------------------------------------------------------------------------->
 </body>
