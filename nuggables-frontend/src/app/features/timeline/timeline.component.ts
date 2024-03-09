@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Product } from '../../shared/models/product';
 import { ProductService } from '../../core/services/product.service';
 
-@Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+@NgModule({
+  declarations: [TimelineComponent],
+  imports: [CommonModule],
+  exports: [TimelineComponent]
 })
+
 export class TimelineComponent implements OnInit {
   products: Product[] = [];
 
